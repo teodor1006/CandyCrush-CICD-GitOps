@@ -88,16 +88,13 @@ jobs:
       - name: Get kube config file 
         run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }}
 
-      - name: Print config file 
-        run: cat ~/.kube/config
-
       - name: Login to ECR 
         run: kubectl create secret docker-registry regcred --docker-server=${{ secrets.REGISTRY }} --docker-username=AWS  --docker-password=$(aws ecr get-login-password)
 
       - name: Deploy image to EKS cluster
         run: |
           kubectl apply -f deployment.yaml
-          kubectl apply -f  
+          kubectl apply -f service.yaml 
 
       - name: Send a Slack Notification
         if: always()
