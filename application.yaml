@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/teodor1006/CandyCrush-CICD-GitOps.git
     targetRevision: HEAD
-    path: ./
+    path: manifests
 
   destination:
     server: https://kubernetes.default.svc
