@@ -104,5 +104,4 @@ jobs:
           steps: ${{ toJson(steps) }}
           channel: '#githubactions-cicd'
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}                         
-  
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
