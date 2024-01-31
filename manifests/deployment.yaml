@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: candycrush
-          image: "865893227318.dkr.ecr.us-east-1.amazonaws.com/candycrush"
+          image: "<your-ecr-repo-uri>"
           ports:
           - containerPort: 3000
