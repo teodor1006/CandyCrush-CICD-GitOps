@@ -1,0 +1,9 @@
+variable "region" {}
+variable "clusterName" {}
+variable "vpcCIDR" {}
+variable "pubSub1CIDR" {}
+variable "pubSub2CIDR" {}
+variable "pubSub3CIDR" {}
+variable "privSub1CIDR" {}
+variable "privSub2CIDR" {}
+variable "privSub3CIDR" {}
